@@ -39,10 +39,16 @@
 			r = "as";
 		else
 			continue;
+		profile_url = es[i].textContent.replace("#", "-")
 		var a = document.createElement("a");
 		a.textContent = es[i].textContent;
 		es[i].textContent = "";
-		a.href = "https://" + r + ".battle.net/d3/en/profile/" + a.textContent.replace("#", "-") + "/";
+		a.href = "https://" + r + ".battle.net/d3/en/profile/" + profile_url + "/";
+		es[i].appendChild(a);
+		es[i].appendChild(document.createTextNode(" "));
+		a = document.createElement("a");
+		a.textContent = "(d3up)";
+		a.href = "http://d3up.com/profile/" + profile_url;
 		es[i].appendChild(a);
 	}
 })();
