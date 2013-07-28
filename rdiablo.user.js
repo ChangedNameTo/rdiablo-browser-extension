@@ -2,10 +2,10 @@
 // @name				rdiablo-browser-extension
 // @namespace		reddit_diablo
 // @description	Adds tooltips, linkifies battletags, and makes other small improvements to /r/Diablo.
-// @include			http://*.reddit.com/r/[Dd]iablo
-// @include			http://*.reddit.com/r/[Dd]iablo/*
-// @include			https://*.reddit.com/r/[Dd]iablo
-// @include			https://*.reddit.com/r/[Dd]iablo/*
+// @include			http://*.reddit.com/r/diablo
+// @include			http://*.reddit.com/r/diablo/*
+// @include			https://*.reddit.com/r/diablo
+// @include			https://*.reddit.com/r/diablo/*
 // ==/UserScript==
 
 (function(){
