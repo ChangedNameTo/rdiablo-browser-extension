@@ -15,6 +15,8 @@
 (function(){
 	"use strict";
 
+	var open_in_new_tabs = false;
+
 	var i;
 
 	var o = document.createElement("script");
@@ -53,11 +55,17 @@
 		a.textContent = flairs[i].textContent;
 		flairs[i].textContent = "";
 		a.href = "https://" + r + ".battle.net/d3/en/profile/" + profile_url + "/";
+		if (open_in_new_tabs) {
+			a.target = "_new";
+		}
 		flairs[i].appendChild(a);
 		flairs[i].appendChild(document.createTextNode(" "));
 		a = document.createElement("a");
 		a.textContent = "(d3up)";
 		a.href = "http://d3up.com/profile/" + profile_url;
+		if (open_in_new_tabs) {
+			a.target = "_new";
+		}
 		flairs[i].appendChild(a);
 	}
 }());
