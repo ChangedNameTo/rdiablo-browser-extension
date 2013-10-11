@@ -3,9 +3,13 @@
 // @namespace		reddit_diablo
 // @description	Adds tooltips, linkifies battletags, and makes other small improvements to /r/Diablo.
 // @include			http://*.reddit.com/r/diablo
+// @include			http://*.reddit.com/r/Diablo
 // @include			http://*.reddit.com/r/diablo/*
+// @include			http://*.reddit.com/r/Diablo/*
 // @include			https://*.reddit.com/r/diablo
+// @include			https://*.reddit.com/r/Diablo
 // @include			https://*.reddit.com/r/diablo/*
+// @include			https://*.reddit.com/r/Diablo/*
 // ==/UserScript==
 
 (function(){
