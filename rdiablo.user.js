@@ -29,10 +29,10 @@
 	var as = document.getElementsByTagName("a");
 	var name;
 	for (i = 0; i < as.length; i++) {
-		if (as[i].href === "/item") {				// Change all /item links to valid battle.net links
+		if (as[i].href.indexOf("/item") === as[i].href.length - 5) {				// Change all /item links to valid battle.net links
 			name = as[i].textContent.replace(' ', '-').toLowerCase();
 			as[i].href = "http://us.battle.net/d3/en/item/" + name;
-		} else if (as[i].href === "/skill") {	// Change all /skill links to valid battle.net links
+		} else if (as[i].href.indexOf("/skill") === as[i].href.length - 6) {		// Change all /skill links to valid battle.net links
 			name = as[i].textContent.toLowerCase();
 			if (skills[name]) {
 				as[i].href = "http://us.battle.net/d3/en/class/" + skills[name];
