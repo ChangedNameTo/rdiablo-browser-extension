@@ -31,11 +31,11 @@
 	for (i = 0; i < as.length; i++) {
 		if (as[i].href === "/item") {				// Change all /item links to valid battle.net links
 			name = as[i].textContent.replace(' ', '-').toLowerCase();
-			as[i].href = "https://us.battle.net/d3/en/item/" + name;
+			as[i].href = "http://us.battle.net/d3/en/item/" + name;
 		} else if (as[i].href === "/skill") {	// Change all /skill links to valid battle.net links
 			name = as[i].textContent.toLowerCase();
 			if (skills[name]) {
-				as[i].href = "https://us.battle.net/d3/en/class/" + skills[name];
+				as[i].href = "http://us.battle.net/d3/en/class/" + skills[name];
 			}
 		}
 	}
