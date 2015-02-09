@@ -28,21 +28,21 @@
 
 	var as = document.getElementsByTagName("a");
 	var name;
-	for (i = 0; i < as.length; i++) {
+	for (i = as.length-1; i >= 0; i--) {
 		if (as[i].href.indexOf("/item") === as[i].href.length - 5) {				// Change all /item links to valid battle.net links
 			name = as[i].textContent.replace(' ', '-').toLowerCase();
-			as[i].href = "http://us.battle.net/d3/en/item/" + name;
+			as[i].href = "https://us.battle.net/d3/en/item/" + name;
 		} else if (as[i].href.indexOf("/skill") === as[i].href.length - 6) {		// Change all /skill links to valid battle.net links
 			name = as[i].textContent.toLowerCase();
 			if (skills[name]) {
-				as[i].href = "http://us.battle.net/d3/en/class/" + skills[name];
+				as[i].href = "https://us.battle.net/d3/en/class/" + skills[name];
 			}
 		}
 	}
 
 	var flairs = document.getElementsByClassName("flair");
 	var r, a, profile_url;
-	for (i = 0; i < flairs.length; i++) {
+	for (i = flairs.length-1; i >= 0; i--) {
 		if (flairs[i].textContent === "") { continue; }
 
 		if (flairs[i].className.indexOf("americas") !== -1)		{ r = "us"; }
@@ -55,14 +55,6 @@
 		a.textContent = flairs[i].textContent;
 		flairs[i].textContent = "";
 		a.href = "https://" + r + ".battle.net/d3/en/profile/" + profile_url + "/";
-		if (open_in_new_tabs) {
-			a.target = "_new";
-		}
-		flairs[i].appendChild(a);
-		flairs[i].appendChild(document.createTextNode(" "));
-		a = document.createElement("a");
-		a.textContent = "(d3up)";
-		a.href = "http://d3up.com/profile/" + profile_url;
 		if (open_in_new_tabs) {
 			a.target = "_new";
 		}
